@@ -1,0 +1,9 @@
+2.
+
+BUDGET=int(input("enter your budget"))
+ITEMCOST=int(input("cost of item"))
+if BUDGET>ITEMCOST:
+    money_left=BUDGET-ITEMCOST
+    print("MONEY LEFT :",money_left)
+else:
+    print("OUT OF BUDGET")
