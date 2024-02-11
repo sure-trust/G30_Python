@@ -1,0 +1,33 @@
+7.
+
+# Get user inputs
+fitness_level = input("Enter your fitness level (beginner, intermediate, advanced): ")
+equipment = input("Enter the available equipment (dumbbells, resistance bands, none): ")
+
+# Define exercise suggestions based on fitness level and equipment
+exercise_suggestions = {
+    "beginner": {
+        "dumbbells": ["Dumbbell Squats", "Dumbbell Rows", "Dumbbell Lunges"],
+        "resistance bands": ["Band Pull-Aparts", "Banded Glute Bridges", "Band Pull-Throughs"],
+        "none": ["Bodyweight Squats", "Push-Ups", "Jumping Jacks"]
+    },
+    "intermediate": {
+        "dumbbells": ["Dumbbell Bench Press", "Dumbbell Deadlifts", "Dumbbell Shoulder Press"],
+        "resistance bands": ["Band Deadlifts", "Band Bicep Curls", "Band Tricep Extensions"],
+        "none": ["Burpees", "Mountain Climbers", "Plank"]
+    },
+    "advanced": {
+        "dumbbells": ["Dumbbell Thrusters", "Renegade Rows", "Dumbbell Snatches"],
+        "resistance bands": ["Band Assisted Pull-Ups", "Band Face Pulls", "Band Lateral Raises"],
+        "none": ["Jump Squats", "Plyometric Push-Ups", "Sprints"]
+    }
+}
+
+# Recommend exercises based on user's needs
+if fitness_level in exercise_suggestions:
+    if equipment in exercise_suggestions[fitness_level]:
+        print("Here are some suggested exercises for you:")
+        for exercise in exercise_suggestions[fitness_level][equipment]:
+            print(exercise)
+   
+
