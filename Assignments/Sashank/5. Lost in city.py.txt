@@ -1,0 +1,25 @@
+5.
+
+budget = int(input("Enter your budget: "))
+preferences = input("Enter your dietary preferences: ")
+
+restaurants = [
+    {"name": "Restaurant A", "budget": 20, "preferences": "Vegetarian"},
+    {"name": "Restaurant B", "budget": 30, "preferences": "Vegan"},
+    {"name": "Restaurant C", "budget": 15, "preferences": "Gluten-free"},
+    {"name": "Restaurant D", "budget": 25, "preferences": "Vegetarian"},
+    {"name": "Restaurant E", "budget": 40, "preferences": "Vegan"},
+]
+
+filtered_restaurants = []
+
+for restaurant in restaurants:
+    if restaurant["budget"] <= budget and restaurant["preferences"] == preferences:
+        filtered_restaurants.append(restaurant)
+
+if len(filtered_restaurants) > 0:
+    print("Here are some nearby restaurants that match your criteria:")
+    for restaurant in filtered_restaurants:
+        print(restaurant["name"])
+else:
+    print("Sorry, no restaurants match your criteria.")
