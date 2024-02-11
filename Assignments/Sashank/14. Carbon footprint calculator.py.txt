@@ -1,0 +1,46 @@
+14.
+
+# Gather information about transportation, energy usage, and consumption habits
+transportation_emissions = float(input("Enter your transportation emissions (in kg CO2/year): "))
+energy_emissions = float(input("Enter your energy usage emissions (in kg CO2/year): "))
+consumption_emissions = float(input("Enter your consumption emissions (in kg CO2/year): "))
+
+# Calculate total carbon footprint
+total_emissions = transportation_emissions + energy_emissions + consumption_emissions
+
+# Determine carbon footprint category based on total emissions
+if total_emissions < 5:
+    category = "Low"
+elif total_emissions < 15:
+    category = "Moderate"
+else:
+    category = "High"
+
+# Display the estimated carbon footprint and category
+print(f"Your estimated carbon footprint is {total_emissions:.2f} kg CO2/year.")
+print(f"This puts you in the {category} carbon footprint category.")
+
+
+
+# Recycling Assistant Program
+
+# User input
+waste_type = input("Enter the type of waste: ")
+
+# Check waste type and suggest disposal method
+if waste_type == "Plastic":
+    disposal_method = "Recycle in designated plastic recycling bin."
+elif waste_type == "Glass":
+    disposal_method = "Recycle in designated glass recycling bin."
+elif waste_type == "Paper":
+    disposal_method = "Recycle in designated paper recycling bin."
+elif waste_type == "Electronics":
+    disposal_method = "Dispose of at electronic waste collection center."
+else:
+    disposal_method = "Check local regulations for proper disposal."
+
+# Display suggestion
+print(f"For {waste_type}, it is recommended to: {disposal_method}")
+
+
+

@@ -1,0 +1,12 @@
+1.
+
+prices= int(input("enter prices: "))
+Quantities = int(input("enter quantities: "))
+
+if Quantities >5:
+	total_bill = prices*Quantities*0.9
+else:
+    total_bill = prices*Quantities
+    
+print("total bill:" , total_bill)
+

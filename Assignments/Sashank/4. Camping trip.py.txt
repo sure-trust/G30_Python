@@ -1,0 +1,27 @@
+4.
+
+def suggest_camping_gear(weather, amenities):
+    if weather == "sunny":
+        gear = "Sunscreen, hat, sunglasses"
+    elif weather == "rainy":
+        gear = "Raincoat , waterproof tents, umbrella"
+    elif weather == "cold":
+        gear = "socks, socks, gloves"
+
+    if amenities == "campfire":
+        gear +=  "matchbox, wood"
+    elif amenities == "electricity":
+        gear += " charger, lantern"
+    elif amenities == "picnic table":
+        gear += " Picnic blanket, portable stove"
+    
+
+    return gear
+
+weather_condition = input("Enter weather conditions (sunny, rainy, cold): ")
+campsite_amenities = input("Enter campsite amenities (firepit, electricity, picnic table): ")
+
+suggested_gear = suggest_camping_gear(weather_condition, campsite_amenities)
+print("Suggested camping gear: " + suggested_gear)
+
+
