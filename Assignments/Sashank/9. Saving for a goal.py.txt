@@ -1,0 +1,24 @@
+9.
+
+# Get user inputs
+goal_amount = float(input("Enter your savings goal amount: "))
+timeline = int(input("Enter your desired timeline to reach the goal (in months): "))
+current_savings = float(input("Enter your current savings: "))
+
+# Calculate target monthly savings to reach the goal within the timeline
+target_monthly_savings = (goal_amount - current_savings) / timeline
+
+# Calculate remaining months based on current savings and target monthly savings
+remaining_months = (goal_amount - current_savings) / target_monthly_savings
+
+# Display progress and suggestions
+if current_savings >= goal_amount:
+    print("Congratulations! You've already reached your savings goal.")
+elif remaining_months <= 0:
+    print("Oops! At your current savings rate, it's impossible to reach your goal within the desired timeline.")
+else:
+    print("You're on track to reach your goal in {int(remaining_months)} months.")
+    if target_monthly_savings > current_savings:
+        print("Consider increasing your monthly savings to reach your goal on time.")
+    else:
+        print("Your current savings plan are sufficient to reach your goal on time.")
